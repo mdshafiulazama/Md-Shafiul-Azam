@@ -15,9 +15,12 @@
             padding: 0;
         }
         header {
-            background-color: #0073e6;
+            background-color: #0265c8;
             color: #fff;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         h1 {
             margin: 0;
@@ -28,14 +31,14 @@
         nav a {
             margin: 10px;
             text-decoration: none;
-            color: #edf0f4;
+            color: rgb(234, 223, 223);
             font-weight: bold;
             transition: font-size 0.2s, transform 0.2s, color 0.2s; /* Add transitions for font-size, transform, and color */
         }
         nav a:hover {
             font-size: 18px; /* Increase font size on hover */
             transform: scale(1.1); /* Add a scale effect on hover */
-            color: #f4f0ee; /* Change text color on hover */
+            color: #e90707; /* Change text color on hover */
         }
         .images {
             display: flex;
@@ -48,10 +51,12 @@
             height: 150px;
             border-radius: 80%;
             overflow: hidden;
+            margin-right: 20px; /* Add margin to create space between images */
         }
         .square-image {
             width: 150px;
             height: 150px;
+            margin-right: 20px; /* Add margin to create space between images */
         }
         .circle-image img, .square-image img {
             width: 100%;
@@ -65,13 +70,24 @@
             margin: 10px;
             text-decoration: none;
             font-size: 30px;
-            color: #0073e6;
+            color: #0661ca;
             transition: font-weight 0.2s, font-size 0.2s, color 0.2s; /* Add transitions for font-weight, font-size, and color */
         }
         .social-icons a:hover {
             font-weight: bold; /* Change the font weight to bold on hover */
             font-size: 40px; /* Increase font size on hover */
             color: #ff0000; /* Change text color on hover */
+        }
+        .university-logo a {
+            text-decoration: none;
+            color: #0505bd;
+        }
+        nav a {
+            
+            text-decoration: none;
+            color: rgb(1, 0, 6);
+            font-weight: bold;
+            transition: font-size 0.2s, transform 0.2s, color 0.2s; /* Add transitions for font-size, transform, and color */
         }
     </style>
 </head>
@@ -81,7 +97,7 @@
         <nav>
             <a href="">Home</a>
             <a href="https://maps.app.goo.gl/zWug5LRuRfQtXrte6">Map</a>
-            <a href="+8801518341620, +8801870654602">Contact</a>
+            <a href="tel:+8801518341620, +8801870654602">Contact</a>
         </nav>
     </header>
 
@@ -89,40 +105,46 @@
         <div class="circle-image">
             <img src="my.jpg" alt="Circle Image">
         </div>
-        <h1>            </h1>
         <div class="square-image">
             <img src="whatsapp.jpg" alt="Square Image">
-
         </div>
-       
-        &hearts;
-        
         <div class="square-image">
             <img src="ins.jpg" alt="Square Image">
-
         </div>
-        &hearts;
         <div class="square-image">
             <img src="face.jpg" alt="Square Image">
-
         </div>
-        &hearts;
         <div class="square-image">
             <img src="you.jpg" alt="Square Image">
-
         </div>
     </div>
-</header>
+    
+    <!-- University logo and additional links -->
+    <!-- University logo and university name -->
+<div class="university-logo">
+    <a href="https://www.bubt.edu.bd">
+        <img src="versity.png" alt="University Logo" width="150" height="150">
+    </a>
+    <p>Bangladesh University Of Business and Technology</p> <!--"University Name" with the actual name of your university -->
+</div>
 
-
-
-<section>
-    <h2>About Me</h2>
-    <p>I'm a passionate computer science engineering student at Bangladesh University of Business and Technology. 
-        My programming journey began with a curiosity to understand computers. 
-        I'm skilled in various languages and technologies, enjoy solving complex problems, and thrive in collaborative environments. 
-        I'm dedicated to creating innovative software solutions that make a difference. Let's connect and create something remarkable together..</p>
-</section>
+    <nav>
+        <h2>About CSE Department Intake 49 section 3</h2>
+        <!-- Add five additional links -->
+        <a href="https://classroom.google.com/c/NDQ5MDU3Mzc0MzM4">Classes</a>
+        <a href="https://classroom.google.com/c/NDQ5MDU3Mzc0MzM4/p/NjM3MDgzODIzNTg3/details">Rutine</a>
+        <a href="https://classroom.google.com/c/NDQ5MDU3Mzc0MzM4/p/NTMwNDY2ODAwOTc5/details">Class Test</a>
+        <a href="https://classroom.google.com/c/NDQ5MDU3Mzc0MzM4/p/NjM3MDgzODM0NzQ2/details">Semester Calaner</a>
+        
+    </nav>
+    
+    <section>
+        <h2>About Me</h2>
+        <p>I'm a passionate computer science engineering student at Bangladesh University of Business and Technology. 
+            My programming journey began with a curiosity to understand computers. 
+            I'm skilled in various languages and technologies, enjoy solving complex problems, and thrive in collaborative environments. 
+            I'm dedicated to creating innovative software solutions that make a difference. Let's connect and create something remarkable together.</p>
+    </section>
     <div class="social-icons">
         <a href="https://github.com/mdshafiulazama"><i class="fab fa-github"></i></a>
         <a href="https://www.facebook.com/mdshafiulazam132"><i class="fab fa-facebook"></i></a>
