@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md Shafiul Azam</title>
+    <title>Md Shafiul Azam </title>
     <!-- Include Font Awesome library for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <style>
@@ -15,14 +15,23 @@
             background-attachment: fixed;
             text-align: center;
             margin: 0;
-            padding: 0;
+            padding: 10%;
             color: #fff; /* Change text color to white for better visibility on the background */
         }
         .circle-image, .square-image {
-            width: 150px;
-            height: 150px;
-            margin-right: 20px;
+            width: 120px;
+            height: 120px;
+            margin-right: 40px;
         }
+/* For screens smaller than 768px (typical for mobile devices) */
+@media (max-width: 500px) {
+    /* Styles for screens up to 768px (typical for mobile devices) */
+}
+
+@media (min-width: 769px) {
+    /* Styles for screens larger than 768px (typical for computers) */
+}
+
 
         @media (max-width: 768px) {
             /* Adjust the size and spacing for smaller screens */
@@ -42,44 +51,43 @@
             padding: 0%;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: left;
             transition: 0.5s;
             overflow-x: hidden;
         }
 
         .sidebar a {
-            margin: 20px;
+            margin: 30px;
             text-decoration: none;
-            color: #fff;
+            color: #e00b0b;
             font-size: 18px;
             transition: font-size 0.2s, transform 0.2s, color 0.2s;
         }
 
         .sidebar a:hover {
-            font-size: 20px;
+            font-size: 60px;
             transform: scale(1.1);
             color: #e90707;
         }
 
        .content {
             margin-left: 0;
-            padding: 20px;
+            padding: 40px;
             transition: margin-left 0.5s;
         }
         .openbtn {
             position: absolute;
             left: 0;
-            top: 15px;
+            top: 30px;
             font-size: 30px;
             cursor: pointer;
         }
         .footer {
             text-align: center;
-            
-            color: rgba(247, 2, 2, 0); /* Footer text is transparent */
-            padding: 10px;
+            color: white; /* Footer text is transparent */
+            padding: 0%;
             position: absolute;
-            bottom: 0;
+            bottom: 10%;
             width: 100%;
         }
         
@@ -88,20 +96,51 @@
     </style>
     <style>
         body {
+    font-family: Arial, sans-serif;
+    /* Other styles */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* Other styles */
+}
+
+
+.logo {
+    cursor: pointer;
+    margin-bottom: 40px; /* Adjust the margin as needed */
+}
+
+.logo img {
+    width: 200px; /* Adjust the width to create a circle */
+    height: 200px; /* Adjust the height to match the width */
+    border-radius: 100%; /* Adjust the width of the logo image */
+}
+
+h1 {
+    margin: 20%;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    margin: 20px;
+    /* Your navigation link styles */
+}
+
+/* Rest of your CSS */
+/* ... */
+
+        body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             text-align: center;
             margin: 0;
             padding: 0;
         }
-        header {
-            background-color: #0265c8;
-            color: #fff;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+        
         h1 {
             margin: 0;
         }
@@ -112,7 +151,7 @@
             margin: 0;
         }
         h2 {
-        font-size: 30px;
+        font-size: 20px;
     }
         nav {
             margin-top: 20px;
@@ -179,49 +218,47 @@
             transition: font-size 0.2s, transform 0.2s, color 0.2s; /* Add transitions for font-size, transform, and color */
         }
         .sidebar {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            right: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-        }
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 10%;
+    background-color: transparent; /* Background color with 80% opacity */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 15%;
+}
+
 
         .sidebar a {
-            padding: 0%;
-            text-decoration: none;
-            font-size: px;
-            color: #f5f1f1;
-            display: block;
-            transition: 0.3s;
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #f7f5f5; /* Change the link color as needed */
+        display: block;
+        transition: 0.3s;
         }
         
         
         
         .sidebar a:hover {
-            font-weight: bold;
-            color: #f1f1f1;
-            font-size: 40px;
-            color: #bd0505;
+        color: #f1f1f1; /* Change the link color on hover */
+    }
+/* Side bar button style */
+    .openbtn {
+    cursor: pointer;
+    position: fixed;
+    background-color: #f2e9e9;
+    color: rgb(4, 9, 9);
+    border-radius: 20%;
+    top: 5%; /* Adjust the top value as needed */
+    left: 1cm; /* Position 1cm from the left edge of the page */
+}
 
-        }
 
-        .openbtn {
-          
-            cursor: pointer;
-            position: fixed;
-            background-color: #f2e9e9;
-            color: rgb(1, 9, 9);
-            border-radius: 20%;
-            
-            
-        }
         .spacer {
-            margin-bottom: 150%;
+            margin-bottom: 200%;
         }
         a:hover {
         color: #e90707; /* Change the text color on hover */
@@ -273,6 +310,7 @@
             margin: 10px 0; /* Adjust margin to separate images */
         }
     }
+    
     </style>
 </head>
 <body>
@@ -286,7 +324,6 @@
 </style>
 <div class="content">
 </head>
-
 <body>
     <div class="sidebar" id="mySidebar">
         <button class="openbtn" onclick="toggleNav()">&#9776;</button>
@@ -296,7 +333,9 @@
         <a href="tel:+8801518341620, +8801870654602"target="_blank"><i class="fas fa-phone"></i></a>
        
         <p class="spacer"></p>
-        <p style="color: rgb(239, 227, 227);">&copy; 2023 Md Shafiul Azam</p>
+        
+        <br>
+        <br>
         <div class="footer">
             <button id="closeButton" onclick="toggleSidebar()">Close Sidebar</button>
         </div>
@@ -312,8 +351,8 @@
     
     <script>
         function openNav() {
-            document.getElementById("mySidebar").style.width = "200px";
-            document.getElementById("main").style.marginLeft = "200px";
+            document.getElementById("mySidebar").style.width = "100px";
+            document.getElementById("main").style.marginLeft = "100px";
         }
 
         function closeNav() {
@@ -329,7 +368,7 @@
             if (sidebarIsOpen) {
                 sidebar.style.width = "0";
             } else {
-                sidebar.style.width = "250px";
+                sidebar.style.width = "100px";
             }
             sidebarIsOpen = !sidebarIsOpen;
         }
@@ -348,40 +387,30 @@
     
 </style>
 </head>
-<body>
-    
+    <header>
+        
+        <div class="logo" onclick="scrollToBottom()">
+            <img src="my2 2.jpg" alt="Logo">
+        </div>
+        <div class="thumbnail-container">
         <h1>Md Shafiul Azam</h1>
         <nav>
-            <a href="">Home</a>
-            <a href="https://maps.app.goo.gl/zWug5LRuRfQtXrte6">Map</a>
-            <a href="tel:+8801518341620, +8801870654602">Contact</a>
+           
         </nav>
     </header>
-
-    <div class="images">
-        <div class="circle-image">
-            <img src="my2.jpg" alt="Circle Image">
-        </div>
-        <div class="square-image">
-            <img src="whatsapp.jpg" alt="Square Image">
-        </div>
-        <div class="square-image">
-            <img src="ins.jpg" alt="Square Image">
-        </div>
-        <div class="square-image">
-            <img src="face.jpg" alt="Square Image">
-        </div>
-        <div class="square-image">
-            <img src="you.jpg" alt="Square Image">
-        </div>
-    </div>
+    <script>
+        function scrollToBottom() {
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+    </script>
+   
     
     
     <!-- University logo and additional links -->
     <!-- University logo and university name -->
    
        
-        <div class="thumbnail-container">
+    <div class="thumbnail-container">
     <a href="https://www.bubt.edu.bd">
         <img src="versity.png" alt="University Logo" width="200" height="200">
     
@@ -397,8 +426,6 @@
     <nav>
         <h2>About CSE Department Intake 49 section 3</h2>
         <!-- Add five additional links -->
-       
-       
 
         <br>
         <br>
@@ -574,7 +601,7 @@
     <br>
     <h2>সময় live</h2>
     <div class="thumbnail">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/LnUj5rphJr8?si=kwIX808XgzfKy7pt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wMNDhXcjtDo?si=Skc_XV9IRFJZWPxa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 </section>
 </section>
@@ -645,6 +672,23 @@
             I'm dedicated to creating innovative software solutions that make a difference. 
             Let's connect and create something remarkable together.</h>
     </section>
+    <div class="images">
+        <div class="circle-image">
+            <img src="my2.jpg" alt="Circle Image">
+        </div>
+        <div class="square-image">
+            <img src="whatsapp.jpg" alt="Square Image">
+        </div>
+        <div class="square-image">
+            <img src="ins.jpg" alt="Square Image">
+        </div>
+        <div class="square-image">
+            <img src="face.jpg" alt="Square Image">
+        </div>
+        <div class="square-image">
+            <img src="you.jpg" alt="Square Image">
+        </div>
+    </div>
     
 </div>
     <div class="social-icons">
