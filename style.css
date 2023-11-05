@@ -80,3 +80,37 @@ section img {
     transform: scale(1.1); /* Grow the image by 10% on hover */
     font-weight: bold; /* Change font weight to bold on hover */
 }
+.portal-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.portal-links a {
+    margin: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.2s;
+    display: block;
+}
+.portal-links img {
+    max-width: 150px;
+    height: auto;
+    transition: transform 0.2s;
+}
+.portal-links a:hover {
+    transform: scale(1.1);
+}
+
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #0265c8; /* Background color for the footer */
+    color: #fff; /* Text color for the footer */
+    text-align: center;
+    padding: 10px;
+}
