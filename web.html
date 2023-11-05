@@ -18,6 +18,71 @@
             padding: 0;
             color: #fff; /* Change text color to white for better visibility on the background */
         }
+        .circle-image, .square-image {
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+        }
+
+        @media (max-width: 768px) {
+            /* Adjust the size and spacing for smaller screens */
+            .circle-image, .square-image {
+                width: 100px;
+                height: 100px;
+                margin: 10px; /* Reduce the margin for spacing */
+            }
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #0265c8;
+            padding: 0%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.5s;
+            overflow-x: hidden;
+        }
+
+        .sidebar a {
+            margin: 20px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            transition: font-size 0.2s, transform 0.2s, color 0.2s;
+        }
+
+        .sidebar a:hover {
+            font-size: 20px;
+            transform: scale(1.1);
+            color: #e90707;
+        }
+
+       .content {
+            margin-left: 0;
+            padding: 20px;
+            transition: margin-left 0.5s;
+        }
+        .openbtn {
+            position: absolute;
+            left: 0;
+            top: 15px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .footer {
+            text-align: center;
+            
+            color: rgba(247, 2, 2, 0); /* Footer text is transparent */
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        
         /* The rest of your CSS styles remain the same */
         /* ... */
     </style>
@@ -40,6 +105,15 @@
         h1 {
             margin: 0;
         }
+        h1 {
+        font-size: 60px;
+    }
+    h2 {
+            margin: 0;
+        }
+        h2 {
+        font-size: 30px;
+    }
         nav {
             margin-top: 20px;
         }
@@ -79,7 +153,7 @@
             object-fit: cover;
         }
         .social-icons {
-            margin: 25px;
+            margin: 30px;
         }
         .social-icons a {
             margin: 10px;
@@ -104,10 +178,178 @@
             font-weight: bold;
             transition: font-size 0.2s, transform 0.2s, color 0.2s; /* Add transitions for font-size, transform, and color */
         }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 0%;
+            text-decoration: none;
+            font-size: px;
+            color: #f5f1f1;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        
+        
+        .sidebar a:hover {
+            font-weight: bold;
+            color: #f1f1f1;
+            font-size: 40px;
+            color: #bd0505;
+
+        }
+
+        .openbtn {
+          
+            cursor: pointer;
+            position: fixed;
+            background-color: #f2e9e9;
+            color: rgb(1, 9, 9);
+            border-radius: 20%;
+            
+            
+        }
+        .spacer {
+            margin-bottom: 150%;
+        }
+        a:hover {
+        color: #e90707; /* Change the text color on hover */
+        animation: textPulse 0.5s infinite; /* Add animation with a 0.5-second pulse effect */
+    }
+
+    @keyframes textPulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); } /* Scale the text to 1.1x size halfway through the animation */
+        100% { transform: scale(1); }
+    }
+    .thumbnail-container {
+        text-align: center;
+    }
+
+    .thumbnail-container a {
+        display: block;
+        margin-top: 10px; /* Adjust the margin as needed for spacing */
+        text-decoration: none;
+        color: #ede4e4; /* Change the text color as desired */
+        font-weight: bold;
+    }
+
+    .thumbnail-container a:hover {
+        color: #f9f4f4; /* Change the text color on hover */
+    }
+    .images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .circle-image, .square-image {
+        width: 150px;
+        height: 150px;
+        margin-right: 20px;
+    }
+
+    @media (max-width: 768px) {
+        /* Adjust the size for smaller screens (e.g., mobile) */
+        .images {
+            flex-direction: column; /* Stack images vertically on smaller screens */
+        }
+
+        .circle-image, .square-image {
+            width: 100px; /* Set the desired width for mobile */
+            height: 100px; /* Set the desired height for mobile */
+            margin: 10px 0; /* Adjust margin to separate images */
+        }
+    }
     </style>
 </head>
 <body>
-    <header>
+    <div class="site-bar">
+    <div class="sidebar">
+        <a href="https://www.facebook.com/scholarsquadbd">Home</a>
+        <a href="https://maps.app.goo.gl/zWug5LRuRfQtXrte6">Map</a>
+        <a href="tel:+8801518341620, +8801870654602">Contact</a>
+        
+    </div>
+</style>
+<div class="content">
+</head>
+
+<body>
+    <div class="sidebar" id="mySidebar">
+        <button class="openbtn" onclick="toggleNav()">&#9776;</button>
+        
+        <a href="https://www.facebook.com/scholarsquadbd"target="_blank"><i class="fas fa-home"></i></a>
+        <a href="https://maps.app.goo.gl/zWug5LRuRfQtXrte6"target="_blank"><i class="fas fa-map-marker"></i></a>
+        <a href="tel:+8801518341620, +8801870654602"target="_blank"><i class="fas fa-phone"></i></a>
+       
+        <p class="spacer"></p>
+        <p style="color: rgb(239, 227, 227);">&copy; 2023 Md Shafiul Azam</p>
+        <div class="footer">
+            <button id="closeButton" onclick="toggleSidebar()">Close Sidebar</button>
+        </div>
+
+        
+
+    </div>
+    <div class="content" id="main">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        
+    </div>
+   
+    
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "200px";
+            document.getElementById("main").style.marginLeft = "200px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+    <script>
+        let sidebarIsOpen = false;
+
+        function toggleNav() {
+            const sidebar = document.getElementById("mySidebar");
+            if (sidebarIsOpen) {
+                sidebar.style.width = "0";
+            } else {
+                sidebar.style.width = "250px";
+            }
+            sidebarIsOpen = !sidebarIsOpen;
+        }
+
+        // Close the sidebar when clicking anywhere outside of it
+        window.onclick = function(event) {
+            if (sidebarIsOpen) {
+                if (event.target !== document.getElementById("mySidebar") && event.target !== document.querySelector(".openbtn")) {
+                    document.getElementById("mySidebar").style.width = "0";
+                    sidebarIsOpen = false;
+                }
+            }
+        };
+        
+    </script>
+    
+</style>
+</head>
+<body>
+    
         <h1>Md Shafiul Azam</h1>
         <nav>
             <a href="">Home</a>
@@ -137,36 +379,285 @@
     
     <!-- University logo and additional links -->
     <!-- University logo and university name -->
-<div class="university-logo">
+   
+       
+        <div class="thumbnail-container">
     <a href="https://www.bubt.edu.bd">
-        <img src="versity.png" alt="University Logo" width="150" height="150">
+        <img src="versity.png" alt="University Logo" width="200" height="200">
+    
+        <br>
+        <br>
+        <br>
     </a>
-    <p>Bangladesh University Of Business and Technology</p> <!--"University Name" with the actual name of your university -->
+   
+    <h2>Bangladesh University Of Business and Technology</h2>
+     <!--"University Name" with the actual name of your university -->
 </div>
 
     <nav>
         <h2>About CSE Department Intake 49 section 3</h2>
         <!-- Add five additional links -->
-        <a href="https://classroom.google.com/c/NDQ5MDU3Mzc0MzM4">Classes</a>
-        <a href="https://classroom.google.com/c/NDQ5MDU3Mzc0MzM4/p/NjM3MDgzODIzNTg3/details">Rutine</a>
-        <a href="https://classroom.google.com/c/NDQ5MDU3Mzc0MzM4/p/NTMwNDY2ODAwOTc5/details">Class Test</a>
-        <a href="https://classroom.google.com/c/NDQ5MDU3Mzc0MzM4/p/NjM3MDgzODM0NzQ2/details">Semester Calaner</a>
+       
+       
+
+        <br>
+        <br>
         
+        <a href="https://classroom.google.com/c/NDQ5MDU3Mzc0MzM4" target="_blank">
+            <i class="fas fa-chalkboard"></i> Google Classroom
+        </a>
+        <a href="https://classroom.google.com/c/NDQ5MDU3Mzc0MzM4/p/NjM3MDgzODIzNTg3/details" target="_blank">
+            <i class="fas fa-chalkboard"></i> Rutine
+        </a>
+        <a href="https://classroom.google.com/c/NDQ5MDU3Mzc0MzM4/p/NTMwNDY2ODAwOTc5/details" target="_blank">
+            <i class="fas fa-chalkboard"></i> Class Test
+        </a>
+        <a href="https://classroom.google.com/c/NDQ5MDU3Mzc0MzM4/p/NjM3MDgzODM0NzQ2/details" target="_blank">
+            <i class="fas fa-chalkboard"></i> Semester Acadamic Calaner
+        </a>
+        
+       
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            var sidebarButton = document.getElementById("sidebarButton");
+            var closeButton = document.getElementById("closeButton");
+
+            if (sidebar.style.width === "0px" || sidebar.style.width === "") {
+                sidebar.style.width = "250px";
+                sidebarButton.style.display = "none";
+                closeButton.style.display = "white";
+            } else {
+                sidebar.style.width = "0";
+                sidebarButton.style.display = "white";
+                closeButton.style.display = "none";
+            }
+        }
+    </script>
     </nav>
+    <style>
+        .thumbnail {
+            width: 1024px;
+            height: 600px;
+            overflow: hidden;
+            margin: 0 auto; /* Add this line to center-align the .thumbnail */
+        }
+    
+        .thumbnail iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <br>
+    <br>
+    <br>
+    <section>
+        <h2>Bangladesh News</h2>
+        <h2>প্রথম আলো</h2>
+        <div class="thumbnail">
+            <iframe src="https://www.prothomalo.com"></iframe>
+        </div>
+    </section>
+    <div>
+        <a href="https://www.prothomalo.com" target="_blank" style="font-size: 30px; color: rgb(250, 249, 249);">
+            <span id="clickHere" style="display: inline-block; position: relative;">
+                Click here
+            </span>
+        </a>
+    </div>
+    <style>
+        #clickHere:hover {
+            color: rgb(255, 0, 0) !important; /* Change to the desired hover color */
+        }
+    </style>
+    <script>
+        document.querySelector(".thumbnail").addEventListener("click", function() {
+            window.open("https://www.prothomalo.com", "_blank");
+
+        });
+         
+    </script>
+      
+    <section>
+        <br>
+        <h2>বাংলাদেশ প্রতিদিন</h2>
+        <br>
+      
+    <div class="thumbnail">
+        <iframe src="https://www.bd-pratidin.com"></iframe>
+    </div>
+</section>
+<div>
+    <a href="https://www.bd-pratidin.com" target="_blank" style="font-size: 30px; color: rgb(250, 249, 249);">
+        <span id="clickHere" style="display: inline-block; position: relative;">
+            Click here
+        </span>
+    </a>
+</div>
+<style>
+    #clickHere:hover {
+        color: rgb(255, 0, 0) !important; /* Change to the desired hover color */
+    }
+</style>
+    <script>
+        document.querySelectorAll(".thumbnail")[1].addEventListener("click", function() {
+            window.open("https://www.bd-pratidin.com", "_blank");
+        });
+    </script>
     
     <section>
-        <h2>About Me</h2>
-        <p>I'm a passionate computer science engineering student at Bangladesh University of Business and Technology. 
-            My programming journey began with a curiosity to understand computers. 
-            I'm skilled in various languages and technologies, enjoy solving complex problems, and thrive in collaborative environments. 
-            I'm dedicated to creating innovative software solutions that make a difference. Let's connect and create something remarkable together.</p>
+        <br>
+        <h2>BD Job News</h2>
+        <br>
+        <h2>BD Job Careers</h2>
+        <br>
+      <h2>     </h2>
+        <div class="thumbnail">
+            <iframe src="https://www.bdjobscareers.com"></iframe>
+        </div>
     </section>
-    <div class="social-icons">
-        <a href="https://github.com/mdshafiulazama"><i class="fab fa-github"></i></a>
-        <a href="https://www.facebook.com/mdshafiulazam132"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/shafiulazamsaikot"><i class="fab fa-instagram"></i></a>
-        <a href="https://youtube.com/@multilingualcodewithskt"><i class="fab fa-youtube"></i></a>
-        <a href="https://g.co/kgs/FNWpeM"><i class="fab fa-google"></i></a>
+    <div>
+        <a href="https://www.bdjobscareers.com" target="_blank" style="font-size: 30px; color: rgb(250, 249, 249);">
+            <span id="clickHere" style="display: inline-block; position: relative;">
+                Click here
+            </span>
+        </a>
     </div>
+    <style>
+        #clickHere:hover {
+            color: rgb(255, 0, 0) !important; /* Change to the desired hover color */
+        }
+    </style>
+    <br>
+    <script>
+        document.querySelectorAll(".thumbnail")[1].addEventListener("click", function() {
+            window.open("https://www.bdjobscareers.com", "_blank");
+        });
+    </script>
+
+<section>
+  
+    <h2>BD Govt Job</h2>
+    <br>
+    
+    <div class="thumbnail">
+        <iframe src="https://bdgovtjobs.com"></iframe>
+    </div>
+</section>
+<div>
+    <a href="https://bdgovtjobs.com" target="_blank" style="font-size: 30px; color: rgb(250, 249, 249);">
+        <span id="clickHere" style="display: inline-block; position: relative;">
+            Click here
+        </span>
+    </a>
+</div>
+<style>
+    #clickHere:hover {
+        color: rgb(255, 0, 0) !important; /* Change to the desired hover color */
+    }
+</style>
+<script>
+    document.querySelectorAll(".thumbnail")[1].addEventListener("click", function() {
+        window.open("https://bdgovtjobs.com", "_blank");
+
+        
+        
+    });
+</script>
+
+<!-- Section 2 -->
+<section>
+    <br>
+    <h2>YouTube</h2>
+    <br>
+    <h2>সময় live</h2>
+    <div class="thumbnail">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wMNDhXcjtDo?si=Skc_XV9IRFJZWPxa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+</section>
+</section>
+<br>
+    <h2>JANUNA TV LIVE</h2>
+    <div class="thumbnail">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w-Rf0A--Xp4?si=IR0HpzbSxHD3BMDt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</section>
+</script>
+
+<!-- Section 3 -->
+<section>
+    <br>
+    <h2>Movie Servers</h2>
+    <br>
+    <h2>MLWBD</h2>
+    <br>
+    <div class="thumbnail-container">
+        <a href="https://mlwbd.support" target="_blank">
+            <img src="mlwbd.jpg" alt="Thumbnail Image" style="width: 700px; height: 500px;">
+            
+        </a>
+</section>
+
+<script>
+    // Use Open Graph to fetch metadata for the link
+    openGraphScrape({
+        url: "https://mlwbd.support"
+    }).then(function (data) {
+        if (data.success && data.data.ogImage) {
+            // Update the thumbnail image with the fetched image
+            document.getElementById("linkThumbnail").src = data.data.ogImage.url;
+        }
+    });
+</script>
+<section>
+    <br>
+    <h2>Movie Servers</h2>
+    <br>
+    <h2>Free Drive Movies</h2>
+  
+    <br>
+    <div class="thumbnail-container">
+        <a href="https://freedrivemovie.lol" target="_blank">
+            <img src="free.jpg" alt="Thumbnail Image" style="width: 700px; height: 500px;">
+            
+        </a>
+</section>
+
+<script>
+    // Use Open Graph to fetch metadata for the link
+    openGraphScrape({
+        url: "https://freedrivemovie.lol"
+    }).then(function (data) {
+        if (data.success && data.data.ogImage) {
+            // Update the thumbnail image with the fetched image
+            document.getElementById("linkThumbnail").src = data.data.ogImage.url;
+        }
+    });
+</script>
+    <section>
+        <h3>About Me</h3>
+        <h>I'm a passionate computer science engineering student at Bangladesh University of Business and Technology. 
+            My programming journey began with a curiosity to understand computers. 
+            I'm skilled in various languages and technologies, enjoy solving complex problems,
+             and thrive in collaborative environments. 
+            I'm dedicated to creating innovative software solutions that make a difference. 
+            Let's connect and create something remarkable together.</h>
+    </section>
+    
+</div>
+    <div class="social-icons">
+       
+        <a href="https://github.com/mdshafiulazama"target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com/mdshafiulazam132"target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/shafiulazamsaikot"target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@multilingualcodewithskt"target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://g.co/kgs/FNWpeM"target="_blank"><i class="fab fa-google"></i></a>
+    </div>
+    <footer>
+        <p>&copy; 2023 Md Shafiul Azam</p>
+    </footer>
+    
 </body>
 </html>
